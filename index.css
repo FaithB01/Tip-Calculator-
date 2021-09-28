@@ -1,0 +1,230 @@
+:root {
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan: hsl(184, 14%, 56%);
+    --Light-gray-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-gray-cyan);
+}
+
+@media screen and (max-width: 539px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.logo {
+    margin: 80px auto 30px;
+    display: flex;
+    align-content: center;
+}
+
+.tip-calculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--White);
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 539px) {
+    .tip-calculator {
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:539px) {
+    .bill {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 539px) {
+    .buttons {
+        grid-template-columns: 48% 48%;
+    }
+}
+
+.btn {
+    /* border-radius: 5px; */
+    border: none;
+    background-color: var(--Very-dark-cyan);
+    color: hsl(0, 0%, 100%);
+    font-family: 'SpaceMono';
+    font-weight: 700;
+    padding: 2px;
+}
+
+.btn:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: var(--Very-dark-cyan);
+}
+
+.btn:focus {
+    background-color: hsl(185, 41%, 84%);
+    color: var(--Very-dark-cyan);
+}
+
+.custom-input {
+    background-color: hsl(189, 41%, 97%);
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: var(--Very-dark-cyan);
+    border: none;
+}
+
+@media screen and (max-width: 539px) {
+    .custom-input {
+        width: auto;
+    }
+}
+
+.heading {
+    color: hsl(0, 0%, 100%);
+    margin: 10px 0 0 10px;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.input-dollars {
+    background: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: var(--Very-dark-cyan);
+}
+
+.input-person {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: var(--Very-dark-cyan);
+}
+
+.amount {
+    border: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    height: 30px;
+    width: 50%;
+    color: hsl(172, 67%, 45%);
+    background-color: var(--Very-dark-cyan);
+    text-align: right;
+    margin-right: 5px;
+}
+
+.input {
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    text-align: right;
+    font-size: 18px;
+    width: 90%;
+    display: block;
+}
+
+@media screen and (max-width: 539px) {
+    .input {
+        margin: auto;
+        width: 96%;
+    }
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: var(--Very-dark-cyan);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 539px) {
+    .result {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.reset {
+    color: var(--Very-dark-cyan);
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    margin: 65px 20px 0px;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.reset:active {
+    background-color: hsl(185, 41%, 84%);
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 539px) {
+    .tip-calculator__reset {
+        margin-bottom: 20px;
+    }
+}
+
+.subtitle {
+    color: hsl(184, 14%, 56%);
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    margin: 0 0 0 10px;
+}
+
+.title {
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--Very-dark-cyan);
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
